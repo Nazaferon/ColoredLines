@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Colored Lines</string>
+    <string name="top_score">Top Score:</string>
+    <string name="your_score">Your Score:</string>
+    <string name="colored_lines">Colored Lines</string>
+    <string name="restart">Restart</string>
+    <string name="lose">YOU LOST! PRESS RESTART</string>
+    <string name="warning_before_leaving">Do you really want to exit the game?</string>
+    <string name="exit">Exit</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="top_score_key">top_score</string>
+    <string name="clear">clear</string>
+    <string name="turn_off_the_music">turn off the music</string>
+    <string name="turn_off_sfx">turn off sfx</string>
+    <string name="game_speed">game speed</string>
+    <string name="back">back</string>
+    <string name="play">0</string>
+    <string name="pause">1</string>
+</resources>

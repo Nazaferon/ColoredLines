@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_light">
+
+    <Button
+        android:id="@+id/b_back"
+        android:layout_width="120dp"
+        android:layout_height="56dp"
+        android:backgroundTint="#FF9800"
+        android:text="@string/back"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_game_speed_settings" />
+
+    <TextView
+        android:id="@+id/tv_colored_lines"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/colored_lines"
+        android:textColor="#FF0000"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_music_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/turn_off_the_music"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tv_sfx_settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/sc_music_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_music_settings"
+        app:layout_constraintStart_toEndOf="@+id/tv_music_settings"
+        app:layout_constraintTop_toTopOf="@+id/tv_music_settings" />
+
+    <TextView
+        android:id="@+id/tv_sfx_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/turn_off_sfx"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tv_game_speed_settings"
+        app:layout_constraintEnd_toEndOf="@+id/tv_music_settings"
+        app:layout_constraintTop_toBottomOf="@+id/tv_music_settings" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/sc_sfx_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_sfx_settings"
+        app:layout_constraintStart_toEndOf="@+id/tv_sfx_settings"
+        app:layout_constraintTop_toTopOf="@+id/tv_sfx_settings" />
+
+    <TextView
+        android:id="@+id/tv_game_speed_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/game_speed"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/b_back"
+        app:layout_constraintEnd_toEndOf="@+id/tv_sfx_settings"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sfx_settings" />
+
+    <SeekBar
+        android:id="@+id/sb_game_speed_settings"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:max="2"
+        android:progress="1"
+        android:progressTint="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_game_speed_settings"
+        app:layout_constraintStart_toEndOf="@+id/tv_game_speed_settings"
+        app:layout_constraintTop_toTopOf="@+id/tv_game_speed_settings" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="76dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

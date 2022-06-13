@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_light">
+
+    <Button
+        android:id="@+id/b_clear"
+        android:layout_width="120dp"
+        android:layout_height="56dp"
+        android:backgroundTint="#8BC34A"
+        android:text="@string/clear"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/cl_grid"
+        app:layout_constraintEnd_toStartOf="@+id/tv_your_score"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_colored_lines" />
+
+    <TextView
+        android:id="@+id/tv_top_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/top_score"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/tv_your_score"
+        app:layout_constraintEnd_toEndOf="@+id/tv_colored_lines"
+        app:layout_constraintTop_toBottomOf="@+id/tv_colored_lines" />
+
+    <TextView
+        android:id="@+id/tv_player_top_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="0"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_top_score"
+        app:layout_constraintStart_toEndOf="@+id/tv_top_score"
+        app:layout_constraintTop_toTopOf="@+id/tv_top_score"
+        app:layout_constraintVertical_bias="0.521" />
+
+    <TextView
+        android:id="@+id/tv_your_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/your_score"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@id/cl_grid"
+        app:layout_constraintEnd_toEndOf="@+id/tv_top_score"
+        app:layout_constraintTop_toBottomOf="@+id/tv_top_score" />
+
+    <TextView
+        android:id="@+id/tv_player_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="0"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_your_score"
+        app:layout_constraintStart_toEndOf="@+id/tv_your_score"
+        app:layout_constraintTop_toTopOf="@+id/tv_your_score"
+        app:layout_constraintVertical_bias="0.521" />
+
+    <TextView
+        android:id="@+id/tv_colored_lines"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/colored_lines"
+        android:textColor="#FF0000"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tv_top_score"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableLayout
+            android:id="@+id/tl_grid"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="w,1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </TableLayout>
+
+        <include
+            layout="@layout/lose_panel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/tl_grid"
+            app:layout_constraintEnd_toEndOf="@+id/tl_grid"
+            app:layout_constraintStart_toStartOf="@+id/tl_grid"
+            app:layout_constraintTop_toTopOf="@+id/tl_grid" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/b_restart"
+        android:layout_width="120dp"
+        android:layout_height="56dp"
+        android:backgroundTint="#FF9800"
+        android:text="@string/restart"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/b_settings"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl_grid" />
+
+    <Button
+        android:id="@+id/b_settings"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:backgroundTint="#FF9800"
+        android:drawableEnd="@android:drawable/ic_menu_manage"
+        android:drawingCacheQuality="high"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/b_exit"
+        app:layout_constraintStart_toEndOf="@id/b_restart"
+        app:layout_constraintTop_toBottomOf="@id/cl_grid" />
+
+    <Button
+        android:id="@+id/b_exit"
+        android:layout_width="120dp"
+        android:layout_height="56dp"
+        android:backgroundTint="#FF9800"
+        android:text="@string/exit"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/b_settings"
+        app:layout_constraintTop_toBottomOf="@id/cl_grid" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
