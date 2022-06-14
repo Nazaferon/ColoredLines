@@ -147,7 +147,8 @@
         <include
             layout="@layout/lose_panel"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="9:1"
             app:layout_constraintBottom_toBottomOf="@+id/tl_grid"
             app:layout_constraintEnd_toEndOf="@+id/tl_grid"
             app:layout_constraintStart_toStartOf="@+id/tl_grid"
