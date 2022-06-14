@@ -131,7 +131,7 @@ class MainActivity : AppCompatActivity() {
      */
 
     private fun setLayoutConfigurations() {
-        setContentView(R.layout.activity_main)
+        //setContentView(R.layout.activity_main)
         binding_ = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding_.root)
         playerScoreTextView_ = binding_.tvPlayerScore
@@ -744,5 +744,9 @@ class MainActivity : AppCompatActivity() {
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
         setLayoutConfigurations()
+        if (isGameOver_){
+            val loseLabel = findViewById<LinearLayout>(R.id.ll_lose_panel)
+            loseLabel.visibility = View.VISIBLE
+        }
     }
 }
