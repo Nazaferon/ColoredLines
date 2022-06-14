@@ -108,6 +108,8 @@ class MainActivity : AppCompatActivity() {
                     if (deadBalls_.size > 0) {
                         deleteDeadBalls()
                     }
+                    else if (maxBallsCount_ - balls_.size == 0)
+                        lose()
                     if (movingBall_ != null) {
                         if (!isCellAdded) {
                             isCellAdded = true
@@ -459,7 +461,6 @@ class MainActivity : AppCompatActivity() {
             for (i in 0 until remainingBalls) {
                 generateBall()
             }
-            lose()
         }
     }
 
